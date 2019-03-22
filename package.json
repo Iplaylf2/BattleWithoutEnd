@@ -1,0 +1,28 @@
+{
+  "name": "battle_without_end.js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/BattleWithoutEnd.js",
+  "scripts": {
+    "build": "set NODE_ENV=production && npx webpack --config webpack.prod.js",
+    "watch": "set NODE_ENV=development && npx webpack --watch --config webpack.dev.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.4.0",
+    "@babel/plugin-transform-react-jsx": "^7.3.0",
+    "babel-loader": "^8.0.5",
+    "clean-webpack-plugin": "^2.0.1",
+    "css-loader": "^2.1.1",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.29.6",
+    "webpack-merge": "^4.2.1"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.0"
+  }
+}
