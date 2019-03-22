@@ -9,7 +9,7 @@ module.exports = {
         libraryExport: "default"
     },
     externals: {
-        React: 'React'
+        react: 'React'
     },
     plugins: [
         new CleanWebpackPlugin(),
