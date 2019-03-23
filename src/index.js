@@ -1,2 +1,2 @@
-import main from './component/dom/main.jsx'
+import main from './component/main.jsx'
 export default main
