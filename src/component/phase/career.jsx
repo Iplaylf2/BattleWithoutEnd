@@ -5,19 +5,8 @@ export default function (prop) {
     const [careerIndex, setCareerIndex] = useState(-1);
     const [ageIndex, setAgeIndex] = useState(0);
 
-    const selectCareer = function (index) {
-        if (index !== careerIndex) {
-            setCareerIndex(index);
-        }
-    };
-
     var detail = null;
     if (careerIndex !== -1) {
-        const selectAge = function (index) {
-            if (index !== ageIndex) {
-                setAgeIndex(index);
-            }
-        };
         const career = prop.source[careerIndex];
         const age = career.ageArray[ageIndex];
         detail =
@@ -27,8 +16,10 @@ export default function (prop) {
                         career.ageArray.map((age, index) =>
                             <li
                                 className={`${ageTouch} ${index === ageIndex && ageSelect}`}
-                                onClick={selectAge.bind(null, index)}
-                            >{age.value}</li>
+                                onClick={setAgeIndex.bind(null, index)}
+                            >
+                                {age.value}
+                            </li>
                         )
                     }
                 </ul>
@@ -46,7 +37,7 @@ export default function (prop) {
                 prop.source.map((career, index) =>
                     <li
                         className={`${careerTouch} ${index === careerIndex && careerSelect}`}
-                        onClick={selectCareer.bind(null, index)}
+                        onClick={setCareerIndex.bind(null, index)}
                     >
                         <span>{career.name}</span>
                         <span>{career.name}</span>
