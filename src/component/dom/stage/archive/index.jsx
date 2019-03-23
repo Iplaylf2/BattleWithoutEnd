@@ -14,7 +14,7 @@ export default function (prop) {
                 id: role.id,
                 name: role.name,
                 time: role.time
-            })).map(role => <LoadArchiveItem {...role} onRead={prop.onRead} onDelete={prop.onDelete} ></LoadArchiveItem>)}
+            })).map(role => <LoadArchiveItem role={role} onRead={prop.onRead} onDelete={prop.onDelete} ></LoadArchiveItem>)}
             {rest}
         </ul>
     );

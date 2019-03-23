@@ -6,10 +6,10 @@ export default function (prop) {
     return (
         <li>
             <span>角色</span>
-            <span>{prop.name}</span>
-            <input type="button" value="读取" onClick={prop.onRead.bind(null, prop.id)} />
-            <span>{formatTime(prop.time)}</span>
-            <input type="button" value="删除" onClick={prop.onDelete.bind(null, prop.id)} />
+            <span>{prop.role.name}</span>
+            <input type="button" value="读取" onClick={prop.onRead.bind(null, prop.role.id)} />
+            <span>{formatTime(prop.role.time)}</span>
+            <input type="button" value="删除" onClick={prop.onDelete.bind(null, prop.role.id)} />
         </li>
     );
 };
