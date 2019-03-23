@@ -1,7 +1,19 @@
-import { useContext } from 'react'
-import GameContext from '../gameContext.js'
+import PlayPlate from './main/playerPlate.jsx'
+import MonsterPlate from './main/monsterPlate.jsx'
+import PetPlate from './main/petPlate.jsx'
+import Menu from './main/menu.jsx'
+import Message from './main/message.jsx'
+import SkillPlate from './main/skillPlate.jsx'
+import Gain from './main/gain.jsx'
 
 export default function () {
-    const value = useContext(GameContext);
-    return <p>{value}</p>
+    return [
+        <PlayPlate />,
+        <MonsterPlate />,
+        <PetPlate />,
+        <Menu />,
+        <Message />,
+        <SkillPlate />,
+        <Gain />
+    ];
 }

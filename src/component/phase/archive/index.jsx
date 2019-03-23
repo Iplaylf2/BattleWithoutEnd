@@ -6,7 +6,7 @@ const maxLength = 4;
 export default function (prop) {
     const rest = [];
     for (let i = 0; i !== maxLength - prop.source.length; i++) {
-        rest.push(<UnloadArchiveItem onCreate={prop.onCreate} ></UnloadArchiveItem>);
+        rest.push(<UnloadArchiveItem onCreate={prop.onCreate} />);
     }
     return (
         <ul>
@@ -14,7 +14,7 @@ export default function (prop) {
                 id: role.id,
                 name: role.name,
                 time: role.time
-            })).map(role => <LoadArchiveItem role={role} onRead={prop.onRead} onDelete={prop.onDelete} ></LoadArchiveItem>)}
+            })).map(role => <LoadArchiveItem {...role} onRead={prop.onRead} onDelete={prop.onDelete} />)}
             {rest}
         </ul>
     );

@@ -3,5 +3,6 @@ export default {
     theme: 1,
     archive: 2,
     career: 3,
-    over: 4
+    load: 4,
+    over: 5
 }
