@@ -13,6 +13,7 @@ export default function () {
     const dom = useMemo(() =>
         <div>
             <ul ref={ref}></ul>
-        </div>, [0]);
+        </div>,
+        [0]);
     return dom;
 }

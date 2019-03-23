@@ -1,9 +1,25 @@
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import { careerTouch, careerSelect, ageTouch, ageSelect } from './career.css'
 
 export default function (prop) {
     const [careerIndex, setCareerIndex] = useState(-1);
     const [ageIndex, setAgeIndex] = useState(0);
+
+    const list = useMemo(() =>
+        <ul>
+            {
+                prop.source.map((career, index) =>
+                    <li
+                        className={`${careerTouch} ${index === careerIndex && careerSelect}`}
+                        onClick={setCareerIndex.bind(null, index)}
+                    >
+                        <span>{career.name}</span>
+                        <span>{career.name}</span>
+                    </li>
+                )
+            }
+        </ul>,
+        [careerIndex]);
 
     var detail = null;
     if (careerIndex !== -1) {
@@ -32,19 +48,7 @@ export default function (prop) {
 
     return [
         <h1>战斗无止境</h1>,
-        <ul>
-            {
-                prop.source.map((career, index) =>
-                    <li
-                        className={`${careerTouch} ${index === careerIndex && careerSelect}`}
-                        onClick={setCareerIndex.bind(null, index)}
-                    >
-                        <span>{career.name}</span>
-                        <span>{career.name}</span>
-                    </li>
-                )
-            }
-        </ul>,
+        list,
         detail
     ];
 }
