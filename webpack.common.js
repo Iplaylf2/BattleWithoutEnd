@@ -1,7 +1,7 @@
 ﻿const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
-    entry: './src/index.jsx',
+    entry: './src/index.js',
     output: {
         filename: 'BattleWithoutEnd.js',
         library: 'BattleWithoutEnd',
@@ -29,7 +29,12 @@ module.exports = {
                 test: /\.css$/,
                 use: [
                     'style-loader',
-                    'css-loader'
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: true
+                        }
+                    }
                 ]
             },
             {
