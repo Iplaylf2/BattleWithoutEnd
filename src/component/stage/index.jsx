@@ -1,3 +1,7 @@
+import { useContext } from 'react'
+import GameContext from '../gameContext.js'
+
 export default function () {
-    return <p>play</p>
+    const value = useContext(GameContext);
+    return <p>{value}</p>
 }

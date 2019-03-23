@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import GameContext from './gameContext.js'
 import Preparation from './phase/Preparation.js'
 import Welcome from './phase/welcome.jsx'
 import Theme from './phase/theme.jsx'
@@ -30,7 +31,7 @@ export default function () {
     switch (stage) {
         case Preparation.welcome:
             setTimeout(nextStage, 0, Preparation.theme);
-            return <Welcome></Welcome>;
+            return <Welcome />;
         case Preparation.theme:
             return <Theme onStart={nextStage.bind(null, Preparation.archive)}></Theme>;
         case Preparation.archive:
@@ -38,6 +39,6 @@ export default function () {
         case Preparation.career:
             return <Career source={[{ name: 'foo', ageArray: [{ value: 10 }] }]} onSelect={onSelect}></Career>;
         case Preparation.over:
-            return <Stage></Stage>
+            return <GameContext.Provider value="test"><Stage /></GameContext.Provider>
     }
 }
