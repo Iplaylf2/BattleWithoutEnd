@@ -22,6 +22,10 @@ export default function () {
         filing.create(name);
         nextStage(PresetStage.career);
     };
+
+    const onSelect = function ({ careerIndex, ageIndex }) {
+        nextStage(PresetStage.play);
+    }
     switch (stage) {
         case PresetStage.welcome:
             setTimeout(nextStage, 0, PresetStage.theme);
@@ -31,6 +35,8 @@ export default function () {
         case PresetStage.archive:
             return <Archive source={[]} onCreate={onCreate} onRead={filing.read} onDelete={filing.delete}></Archive>;
         case PresetStage.career:
-            return <Career source={[]}></Career>
+            return <Career source={[{ name: 'foo', ageArray: [{ value: 10 }] }]} onSelect={onSelect}></Career>
+        case PresetStage.play:
+            return <p>play</p>
     }
 }

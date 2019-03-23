@@ -3,4 +3,5 @@ export default {
     theme: 1,
     archive: 2,
     career: 3,
+    play: 4
 }

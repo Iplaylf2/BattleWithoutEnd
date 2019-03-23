@@ -1,0 +1,27 @@
+.careerTouch span:nth-child(1) {
+    display: none
+}
+
+.careerTouch:hover {
+    background-color: yellow
+}
+
+.careerTouch:hover span:nth-child(1) {
+    display: inherit
+}
+
+.careerSelect {
+    background-color: yellow
+}
+
+.careerSelect span:nth-child(1) {
+    display: inherit
+}
+
+.ageTouch:hover {
+    background-color: yellow
+}
+
+.ageSelect {
+    background-color: yellow
+}
