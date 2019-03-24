@@ -4,7 +4,7 @@ import Preparation from './phase/Preparation.js'
 import Welcome from './phase/welcome.jsx'
 import Theme from './phase/theme.jsx'
 import Archive from './phase/archive/index.jsx'
-import Career from './phase/career.jsx'
+import Race from './phase/race.jsx'
 import Load from './phase/load.jsx'
 import Stage from './stage/index.jsx'
 
@@ -19,11 +19,11 @@ const filing = {
 };
 
 export default function () {
-    const [stage, nextStage] = useState(Preparation.over);
+    const [stage, nextStage] = useState(Preparation.welcome);
 
     const onCreate = function (name) {
         filing.create(name);
-        nextStage(Preparation.career);
+        nextStage(Preparation.race);
     };
 
     const onSelect = function ({ careerIndex, ageIndex }) {
@@ -37,8 +37,8 @@ export default function () {
             return <Theme onStart={nextStage.bind(null, Preparation.archive)}></Theme>;
         case Preparation.archive:
             return <Archive source={[]} onCreate={onCreate} onRead={filing.read} onDelete={filing.delete}></Archive>;
-        case Preparation.career:
-            return <Career source={[{ name: 'foo', ageArray: [{ value: 10 }] }]} onSelect={onSelect}></Career>;
+        case Preparation.race:
+            return <Race source={[{ name: 'foo', ageArray: [{ value: 10 }] }]} onSelect={onSelect}></Race>;
         case Preparation.load:
             setTimeout(nextStage, 0, Preparation.over);
             return <Load />;

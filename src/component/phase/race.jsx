@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react'
-import { careerTouch, careerSelect, ageTouch, ageSelect } from './career.css'
+import { careerTouch, careerSelect, ageTouch, ageSelect } from './race.css'
 
 const getLiIndex = function (event) {
     const li = event.target.closest('li');
@@ -18,12 +18,12 @@ export default function (prop) {
     const list = useMemo(() =>
         <ul onClick={selectCareer}>
             {
-                prop.source.map((career, index) =>
+                prop.source.map((race, index) =>
                     <li
                         className={`${careerTouch} ${index === careerIndex ? careerSelect : ''}`}
                     >
-                        <span>{career.name}</span>
-                        <span>{career.name}</span>
+                        <span>{race.name}</span>
+                        <span>{race.name}</span>
                     </li>
                 )
             }
@@ -32,8 +32,8 @@ export default function (prop) {
 
     var detail = null;
     if (careerIndex !== -1) {
-        const career = prop.source[careerIndex];
-        const age = career.ageArray[ageIndex];
+        const race = prop.source[careerIndex];
+        const age = race.ageArray[ageIndex];
 
         const selectAge = function (event) {
             const index = getLiIndex(event);
@@ -44,7 +44,7 @@ export default function (prop) {
             <div>
                 <ul onClick={selectAge}>
                     {
-                        career.ageArray.map((age, index) =>
+                        race.ageArray.map((age, index) =>
                             <li
                                 className={`${ageTouch} ${index === ageIndex ? ageSelect : ''}`}
                             >
