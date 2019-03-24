@@ -45,9 +45,11 @@ export default function (prop) {
     }
 
     return (
-        <div className={prop.className} >
+        <div
+            className={`${prop.className} ${style.wrapper}`}
+        >
             <ul
-                className={style.wrapper}
+                className={style.row}
                 onClick={selectMenu}
             >
                 <li

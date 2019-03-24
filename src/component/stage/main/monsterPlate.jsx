@@ -8,9 +8,9 @@ export default function (prop) {
         <div
             className={`${prop.className} ${style.wrapper}`}
         >
-            <span><span>怪物</span><span>{value}</span></span>
-            <span><span>HP</span><span>{value}</span></span>
-            <span><span>战斗力</span><span>{value}</span></span>
+            <div><span>怪物</span><span>{value}</span></div>
+            <div><span>HP</span><span>{value}</span></div>
+            <div><span>战斗力</span><span>{value}</span></div>
         </div>
     );
 }

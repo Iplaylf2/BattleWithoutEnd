@@ -1,16 +1,29 @@
 .wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper>*:nth-child(1) {
+    flex: 1
+}
+
+.wrapper>*:nth-child(2) {
+    flex: 14
+}
+
+.row {
     list-style: none
 }
 
-.wrapper>li {
+.row>li {
     display: inline
 }
 
-.wrapper>li:hover {
+.row>li:hover {
     background-color: yellow
 }
 
-.wrapper>li.hidden {
+.row>li.hidden {
     display: none
 }
 
@@ -18,10 +31,15 @@
     background-color: yellow
 }
 
+.content {
+    display: flex
+}
+
 .content>div {
     display: none
 }
 
 .content>div.visible {
-    display: initial
+    display: inherit;
+    flex: 1
 }
