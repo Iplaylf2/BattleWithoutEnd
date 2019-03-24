@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react'
-import { careerTouch, careerSelect, ageTouch, ageSelect } from './race.css'
+import style from './race.css'
 
 const getLiIndex = function (event) {
     const li = event.target.closest('li');
@@ -10,22 +10,25 @@ const getLiIndex = function (event) {
 };
 
 export default function (prop) {
-    const [careerIndex, setCareerIndex] = useState(-1);
+    const [raceIndex, setRaceIndex] = useState(-1);
     const [ageIndex, setAgeIndex] = useState(0);
 
     const selectCareer = function (event) {
         const index = getLiIndex(event);
-        if (li !== -1) {
-            setCareerIndex(index);
+        if (index !== -1) {
+            setRaceIndex(index);
         }
     };
 
     const list = useMemo(() =>
-        <ul onClick={selectCareer}>
+        <ul
+            onClick={selectCareer}
+            className={style.raceList}
+        >
             {
                 prop.source.map((race, index) =>
                     <li
-                        className={`${careerTouch} ${index === careerIndex ? careerSelect : ''}`}
+                        className={index === raceIndex ? style.raceSelect : ''}
                     >
                         <span>{race.name}</span>
                         <span>{race.name}</span>
@@ -33,11 +36,11 @@ export default function (prop) {
                 )
             }
         </ul>,
-        [careerIndex]);
+        [raceIndex]);
 
     var detail = null;
-    if (careerIndex !== -1) {
-        const race = prop.source[careerIndex];
+    if (raceIndex !== -1) {
+        const race = prop.source[raceIndex];
         const age = race.ageArray[ageIndex];
 
         const selectAge = function (event) {
@@ -49,11 +52,14 @@ export default function (prop) {
 
         detail =
             <div>
-                <ul onClick={selectAge}>
+                <ul
+                    onClick={selectAge}
+                    className={style.ageList}
+                >
                     {
                         race.ageArray.map((age, index) =>
                             <li
-                                className={`${ageTouch} ${index === ageIndex ? ageSelect : ''}`}
+                                className={index === ageIndex ? style.ageSelect : ''}
                             >
                                 {age.value}
                             </li>
@@ -63,7 +69,7 @@ export default function (prop) {
                 <p>{age.value}</p>
                 <p>{age.value}</p>
                 <p>(升级时增长属性是当前年龄增长的1/4)</p>
-                <input type="button" value="确定" onClick={prop.onSelect.bind(null, { careerIndex, ageIndex })} />
+                <input type="button" value="确定" onClick={prop.onSelect.bind(null, { raceIndex, ageIndex })} />
             </div>;
     }
 

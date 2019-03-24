@@ -1,24 +1,24 @@
-.careerTouch span:nth-child(1) {
+.raceList>li>*:nth-child(1) {
     display: none
 }
 
-.careerTouch:hover {
+.raceList>li:hover {
     background-color: yellow
 }
 
-.careerTouch:hover span:nth-child(1) {
+.raceList>li:hover>*:nth-child(1) {
     display: inherit
 }
 
-.careerSelect {
+.raceSelect {
     background-color: yellow
 }
 
-.careerSelect span:nth-child(1) {
+.raceSelect>*:nth-child(1) {
     display: inherit
 }
 
-.ageTouch:hover {
+.ageList>li:hover {
     background-color: yellow
 }
 
