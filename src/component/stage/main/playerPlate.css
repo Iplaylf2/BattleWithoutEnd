@@ -1,0 +1,13 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+}
+
+.wrapper>span {
+    display: block
+}
+
+.row1 {
+    grid-column: span 3
+}

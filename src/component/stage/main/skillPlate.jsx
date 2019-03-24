@@ -5,9 +5,9 @@ export default function (prop) {
     const value = useContext(GameContext);
     return (
         <div className={prop.className}>
-            <span>攻击</span>
+            <h2>攻击</h2>
             <ul></ul>
-            <span>防御</span>
+            <h2>防御</h2>
             <ul></ul>
         </div>
     );
