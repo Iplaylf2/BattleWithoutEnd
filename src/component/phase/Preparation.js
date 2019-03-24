@@ -4,5 +4,7 @@ export default {
     archive: 2,
     career: 3,
     load: 4,
-    over: 5
+    over: 5,
+    rebirth: 6,
+    load2: 7
 }
