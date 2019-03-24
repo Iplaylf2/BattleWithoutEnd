@@ -1,7 +1,7 @@
 import { useContext, useRef, useState, useEffect, useMemo } from 'react'
 import GameContext from '../../gameContext.js'
 
-export default function () {
+export default function (prop) {
     const value = useContext(GameContext);
     const render = useState({})[1].bind(null, {});
     const ref = useRef();
@@ -11,7 +11,7 @@ export default function () {
         ref.current.appendChild(li);
     });
     const dom = useMemo(() =>
-        <div>
+        <div className={prop.className}>
             <ul ref={ref}></ul>
         </div>,
         [0]);

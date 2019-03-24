@@ -19,7 +19,7 @@ const filing = {
 };
 
 export default function () {
-    const [stage, nextStage] = useState(Preparation.welcome);
+    const [stage, nextStage] = useState(Preparation.over);
 
     const onCreate = function (name) {
         filing.create(name);

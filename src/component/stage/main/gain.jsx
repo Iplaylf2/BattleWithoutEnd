@@ -1,10 +1,10 @@
 import { useContext } from 'react'
 import GameContext from '../../gameContext.js'
 
-export default function () {
+export default function (prop) {
     const value = useContext(GameContext);
     return (
-        <div>
+        <div className={prop.className}>
             <h2>当前地图掉落</h2>
             <span>$</span><span>{value}</span>
             <span>EXP</span><span>{value}</span>
