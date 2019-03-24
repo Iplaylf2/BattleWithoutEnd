@@ -1,0 +1,27 @@
+.wrapper {
+    list-style: none
+}
+
+.wrapper>li {
+    display: inline
+}
+
+.wrapper>li:hover {
+    background-color: yellow
+}
+
+.wrapper>li.hidden {
+    display: none
+}
+
+.select {
+    background-color: yellow
+}
+
+.content>div {
+    display: none
+}
+
+.content>div.visible {
+    display: initial
+}

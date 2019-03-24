@@ -3,6 +3,9 @@ import { careerTouch, careerSelect, ageTouch, ageSelect } from './race.css'
 
 const getLiIndex = function (event) {
     const li = event.target.closest('li');
+    if (li === null) {
+        return -1;
+    }
     return Array.from(li.parentNode.children).indexOf(li);
 };
 
@@ -12,7 +15,9 @@ export default function (prop) {
 
     const selectCareer = function (event) {
         const index = getLiIndex(event);
-        setCareerIndex(index);
+        if (li !== -1) {
+            setCareerIndex(index);
+        }
     };
 
     const list = useMemo(() =>
@@ -37,7 +42,9 @@ export default function (prop) {
 
         const selectAge = function (event) {
             const index = getLiIndex(event);
-            setAgeIndex(index);
+            if (li !== -1) {
+                setAgeIndex(index);
+            }
         };
 
         detail =
