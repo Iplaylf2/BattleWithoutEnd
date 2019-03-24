@@ -1,17 +1,26 @@
 import { useState, useMemo } from 'react'
 import { careerTouch, careerSelect, ageTouch, ageSelect } from './career.css'
 
+const getLiIndex = function (event) {
+    const li = event.target.closest('li');
+    return Array.from(li.parentNode.children).indexOf(li);
+};
+
 export default function (prop) {
     const [careerIndex, setCareerIndex] = useState(-1);
     const [ageIndex, setAgeIndex] = useState(0);
 
+    const selectCareer = function (event) {
+        const index = getLiIndex(event);
+        setCareerIndex(index);
+    };
+
     const list = useMemo(() =>
-        <ul>
+        <ul onClick={selectCareer}>
             {
                 prop.source.map((career, index) =>
                     <li
-                        className={`${careerTouch} ${index === careerIndex && careerSelect}`}
-                        onClick={setCareerIndex.bind(null, index)}
+                        className={`${careerTouch} ${index === careerIndex ? careerSelect : ''}`}
                     >
                         <span>{career.name}</span>
                         <span>{career.name}</span>
@@ -25,14 +34,19 @@ export default function (prop) {
     if (careerIndex !== -1) {
         const career = prop.source[careerIndex];
         const age = career.ageArray[ageIndex];
+
+        const selectAge = function (event) {
+            const index = getLiIndex(event);
+            setAgeIndex(index);
+        };
+
         detail =
             <div>
-                <ul>
+                <ul onClick={selectAge}>
                     {
                         career.ageArray.map((age, index) =>
                             <li
-                                className={`${ageTouch} ${index === ageIndex && ageSelect}`}
-                                onClick={setAgeIndex.bind(null, index)}
+                                className={`${ageTouch} ${index === ageIndex ? ageSelect : ''}`}
                             >
                                 {age.value}
                             </li>
