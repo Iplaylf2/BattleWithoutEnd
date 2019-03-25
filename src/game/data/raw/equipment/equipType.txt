@@ -1,0 +1,9 @@
+Stat(defence, 2)
+Stat(protection, 1)
+HEAVY_BASE
+Stat(hp, 5)
+Stat(protection, 1)
+MEDIUM_BASE
+Stat(hp, 5)
+Stat(defence, 2)
+LIGHT_BASE
