@@ -31,10 +31,14 @@ export default function (prop) {
     const [viewCount, dispatchView] = useReducer(reducer, 0);
     const [menuIndex, setMenuIndex] = useState(-1);
     const content = useMemo(
-        () => menu.map((Item, index) =>
+        () =>
             <div className={style.content}>
-                <Item className={index === menuIndex ? style.visible : ''} />
-            </div>),
+                {
+                    menu.map((Item, index) =>
+                        <Item className={index === menuIndex ? style.visible : ''} />
+                    )
+                }
+            </div>,
         [menuIndex]);
 
     const selectMenu = function (event) {
