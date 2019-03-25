@@ -1,0 +1,9 @@
+var c1 = [];//HEAVY_BASE
+c1[0] = new Stat(Stat.defence, 2);
+c1[1] = new Stat(Stat.protection, 1);
+var c2 = [];//MEDIUM_BASE
+c2[0] = new Stat(Stat.hp, 5);
+c2[1] = new Stat(Stat.protection, 1);
+var c3 = [];//LIGHT_BASE
+c3[0] = new Stat(Stat.hp, 5);
+c3[1] = new Stat(Stat.defence, 2);
