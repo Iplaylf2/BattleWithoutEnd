@@ -1,3 +1,23 @@
+.wrapper {
+    display: flex;
+}
+
+.wrapper>*:nth-child(1) {
+    flex: 3
+}
+
+.wrapper>*:nth-child(2) {
+    flex: 5
+}
+
+.row {
+    list-style: none
+}
+
+.row>li {
+    display: inline-block
+}
+
 .raceList>li>*:nth-child(1) {
     display: none
 }

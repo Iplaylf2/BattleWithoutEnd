@@ -16,7 +16,7 @@
 }
 
 .row>li {
-    display: inline
+    display: inline-block
 }
 
 .row>li:hover {

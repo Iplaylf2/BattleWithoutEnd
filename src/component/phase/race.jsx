@@ -50,32 +50,35 @@ export default function (prop) {
             }
         };
 
-        detail =
-            <div>
-                <ul
-                    onClick={selectAge}
-                    className={style.ageList}
-                >
-                    {
-                        race.ageArray.map((age, index) =>
-                            <li
-                                className={index === ageIndex ? style.ageSelect : ''}
-                            >
-                                {age.value}
-                            </li>
-                        )
-                    }
-                </ul>
-                <p>{age.value}</p>
-                <p>{age.value}</p>
-                <p>(升级时增长属性是当前年龄增长的1/4)</p>
-                <input type="button" value="确定" onClick={prop.onSelect.bind(null, { raceIndex, ageIndex })} />
-            </div>;
+        detail = [
+            <ul
+                onClick={selectAge}
+                className={`${style.ageList} ${style.row}`}
+            >
+                {
+                    race.ageArray.map((age, index) =>
+                        <li
+                            className={index === ageIndex ? style.ageSelect : ''}
+                        >
+                            {age.value}
+                        </li>
+                    )
+                }
+            </ul>,
+            <p>{age.value}</p>,
+            <p>{age.value}</p>,
+            <p>(升级时增长属性是当前年龄增长的1/4)</p>,
+            <input type="button" value="确定" onClick={prop.onSelect.bind(null, { raceIndex, ageIndex })} />
+        ]
     }
 
     return [
         <h1>战斗无止境</h1>,
-        list,
-        detail
+        <div className={style.wrapper}>
+            {list}
+            <div>
+                {detail}
+            </div>
+        </div>
     ];
 }
