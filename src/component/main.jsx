@@ -17,6 +17,49 @@ const filing = {
     }
 };
 
+const raceTest = [
+    {
+        name: '人类',
+        ageArray: Array(8).fill(0).map((v, i) => (
+            {
+                value: 10 + i,
+                description: '人类'
+            }))
+    },
+    {
+        name: '精灵',
+        ageArray: Array(8).fill(0).map((v, i) => (
+            {
+                value: 10 + i,
+                description: '精灵'
+            }))
+    },
+    {
+        name: '巨人',
+        ageArray: Array(8).fill(0).map((v, i) => (
+            {
+                value: 10 + i,
+                description: '巨人'
+            }))
+    },
+    {
+        name: '不死',
+        ageArray: Array(8).fill(0).map((v, i) => (
+            {
+                value: 10 + i,
+                description: '不死'
+            }))
+    },
+    {
+        name: '矮人',
+        ageArray: Array(8).fill(0).map((v, i) => (
+            {
+                value: 10 + i,
+                description: '矮人'
+            }))
+    }
+];
+
 export default function () {
     const [stage, nextStage] = useState(Preparation.welcome);
 
@@ -37,7 +80,7 @@ export default function () {
         case Preparation.archive:
             return <Archive source={[]} onCreate={onCreate} onRead={filing.read} onDelete={filing.delete}></Archive>;
         case Preparation.race:
-            return <Race source={[{ name: 'foo', ageArray: [{ value: 10 }] }]} onSelect={onSelect}></Race>;
+            return <Race source={raceTest} onSelect={onSelect}></Race>;
         case Preparation.load:
             setTimeout(nextStage, 0, Preparation.over);
             return <Load />;
