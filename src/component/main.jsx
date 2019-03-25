@@ -10,7 +10,6 @@ import Stage from './stage/index.jsx'
 
 const filing = {
     create(name) {
-        alert(name);
     },
     read() {
     },
