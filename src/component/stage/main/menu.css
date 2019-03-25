@@ -35,11 +35,11 @@
     display: flex
 }
 
-.content>div {
+.content>* {
     display: none
 }
 
-.content>div.visible {
+.content>*.visible {
     display: inherit;
     flex: 1
 }
