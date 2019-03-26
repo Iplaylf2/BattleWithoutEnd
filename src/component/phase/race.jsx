@@ -1,4 +1,5 @@
-import { useState, useMemo } from 'react'
+import { useMemo, useState } from 'react'
+import { useStateWithLast } from '../hook.js'
 import style from './race.css'
 
 const getLiIndex = function (event) {
@@ -9,8 +10,16 @@ const getLiIndex = function (event) {
     return Array.from(li.parentNode.children).indexOf(li);
 };
 
+const createRaceItem = function (key, race, isSelect) {
+    return (
+        <li key={key} className={isSelect ? style.raceSelect : ''}>
+            <span>图标</span><span>{race.name}</span>
+        </li>
+    );
+};
+
 export default function (prop) {
-    const [raceIndex, setRaceIndex] = useState(-1);
+    const [lastRaceIndex, raceIndex, setRaceIndex] = useStateWithLast(-1);
     const [ageIndex, setAgeIndex] = useState(0);
 
     const selectCareer = function (event) {
@@ -21,22 +30,24 @@ export default function (prop) {
         }
     };
 
-    const list = useMemo(() =>
+    const raceLiArray = useMemo(
+        () => prop.source.map((race, index) => createRaceItem(index, race, false)),
+        []);
+
+    const raceListView = useMemo(() =>
         <ul
             onClick={selectCareer}
             className={style.raceList}
         >
-            {
-                prop.source.map((race, index) =>
-                    <li
-                        className={index === raceIndex ? style.raceSelect : ''}
-                    >
-                        <span>图标</span><span>{race.name}</span>
-                    </li>
-                )
-            }
-        </ul>,
-        [raceIndex]);
+            {raceLiArray}
+        </ul>, []);
+
+    if (raceIndex !== -1) {
+        raceLiArray[raceIndex] = createRaceItem(raceIndex, prop.source[raceIndex], true);
+        if (lastRaceIndex !== -1) {
+            raceLiArray[lastRaceIndex] = createRaceItem(lastRaceIndex, prop.source[lastRaceIndex], false);
+        }
+    }
 
     var detail = null;
     if (raceIndex !== -1) {
@@ -75,7 +86,7 @@ export default function (prop) {
     return [
         <h1>战斗无止境</h1>,
         <div className={style.wrapper}>
-            {list}
+            {raceListView}
             <div>
                 {detail}
             </div>
