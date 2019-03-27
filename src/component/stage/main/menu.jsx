@@ -1,4 +1,5 @@
-import { useState, useReducer, useMemo } from 'react'
+import { useReducer } from 'react'
+import { useSwitch } from '../../hook.js'
 import Inventory from '../panel/inventory.jsx'
 import Equipment from '../panel/equipment.jsx'
 import PetList from '../panel/petList.jsx'
@@ -8,7 +9,7 @@ import Option from '../panel/option.jsx'
 import More from '../panel/more.jsx'
 import style from './menu.css'
 
-const menu = [Inventory, Equipment, PetList, SkillList, TitleList, Option, More,]
+const menuType = [Inventory, Equipment, PetList, SkillList, TitleList, Option, More,]
 
 const getLiIndex = function (event) {
     const li = event.target.closest('li');
@@ -28,23 +29,25 @@ const reducer = function (state, action) {
 };
 
 export default function (prop) {
-    const [viewCount, dispatchView] = useReducer(reducer, 0);
-    const [menuIndex, setMenuIndex] = useState(-1);
-    const content = useMemo(
-        () =>
-            <div className={style.content}>
-                {
-                    menu.map((Item, index) =>
-                        <Item className={index === menuIndex ? style.visible : ''} />
-                    )
-                }
-            </div>,
-        [menuIndex]);
+    const [barCount, dispatchBar] = useReducer(reducer, 0);
+
+    const [menuItemArray, switchMenuIndex, menuIndex] = useSwitch(
+        () => menuType.map((Item, index) => <Item key={index} />),
+        lastIndex => {
+            let Item = menuType[lastIndex];
+            return <Item key={lastIndex} />;
+        },
+        currentIndex => {
+            let Item = menuType[currentIndex];
+            return <Item key={currentIndex} className={style.visible} />;
+        },
+        -1
+    );
 
     const selectMenu = function (event) {
         const index = getLiIndex(event);
         if (index > 0 && index < 8) {
-            setMenuIndex(index - 1);
+            switchMenuIndex(index - 1);
         }
     }
 
@@ -57,23 +60,23 @@ export default function (prop) {
                 onClick={selectMenu}
             >
                 <li
-                    className={viewCount > 0 ? '' : style.hidden}
-                    onClick={dispatchView.bind(null, 'left')}
+                    className={barCount > 0 ? '' : style.hidden}
+                    onClick={dispatchBar.bind(null, 'left')}
                 >
                     ←
                 </li>
                 <li
-                    className={`${viewCount > 0 ? style.hidden : ''} ${menuIndex === 0 ? style.select : ''}`}
+                    className={`${barCount > 0 ? style.hidden : ''} ${menuIndex === 0 ? style.select : ''}`}
                 >
                     背包
                 </li>
                 <li
-                    className={`${viewCount > 0 ? style.hidden : ''} ${menuIndex === 1 ? style.select : ''}`}
+                    className={`${barCount > 0 ? style.hidden : ''} ${menuIndex === 1 ? style.select : ''}`}
                 >
                     装备
                 </li>
                 <li
-                    className={`${viewCount > 1 ? style.hidden : ''} ${menuIndex === 2 ? style.select : ''}`}
+                    className={`${barCount > 1 ? style.hidden : ''} ${menuIndex === 2 ? style.select : ''}`}
                 >
                     宠物
                 </li>
@@ -83,28 +86,30 @@ export default function (prop) {
                     技能
                 </li>
                 <li
-                    className={`${viewCount > 0 ? '' : style.hidden} ${menuIndex === 4 ? style.select : ''}`}
+                    className={`${barCount > 0 ? '' : style.hidden} ${menuIndex === 4 ? style.select : ''}`}
                 >
                     称号
                 </li>
                 <li
-                    className={`${viewCount > 1 ? '' : style.hidden} ${menuIndex === 5 ? style.select : ''}`}
+                    className={`${barCount > 1 ? '' : style.hidden} ${menuIndex === 5 ? style.select : ''}`}
                 >
                     设置
                 </li>
                 <li
-                    className={`${viewCount > 1 ? '' : style.hidden} ${menuIndex === 6 ? style.select : ''}`}
+                    className={`${barCount > 1 ? '' : style.hidden} ${menuIndex === 6 ? style.select : ''}`}
                 >
                     其他
                 </li>
                 <li
-                    className={viewCount > 1 ? style.hidden : ''}
-                    onClick={dispatchView.bind(null, 'right')}
+                    className={barCount > 1 ? style.hidden : ''}
+                    onClick={dispatchBar.bind(null, 'right')}
                 >
                     →
                 </li>
             </ul>
-            {content}
+            <div className={style.content}>
+                {menuItemArray}
+            </div>
         </div>
     );
 }

@@ -19,7 +19,7 @@ const createRaceItem = function (key, race, isSelect) {
 };
 
 export default function (prop) {
-    const [raceLiArray, setRaceIndex, raceIndex] = useSwitch(
+    const [raceLiArray, switchRaceIndex, raceIndex] = useSwitch(
         () => prop.source.map((race, index) => createRaceItem(index, race, false)),
         lastIndex => createRaceItem(lastIndex, prop.source[lastIndex], false),
         currentIndex => createRaceItem(currentIndex, prop.source[currentIndex], true),
@@ -31,7 +31,7 @@ export default function (prop) {
     const selectCareer = function (event) {
         const index = getLiIndex(event);
         if (index !== -1) {
-            setRaceIndex(index);
+            switchRaceIndex(index);
             setAgeIndex(0);
         }
     };
