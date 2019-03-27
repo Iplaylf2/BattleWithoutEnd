@@ -1,10 +1,13 @@
 import { useState } from 'react'
 
-export const useStateWithLast = function (state) {
-    const [last, setLast] = useState(state);
-    const [current, setCurrent] = useState(state);
-    return [last, current, state => {
-        setLast(current);
-        setCurrent(state);
+export const useStateWithLast = function (initial) {
+    const [state, setState] = useState([initial, initial]);
+    return [state[0], state[1], newState => {
+        if (newState === state[1]) {
+            state[0] = newState;
+            setState(state);
+        } else {
+            setState([state[1], newState]);
+        }
     }]
 };

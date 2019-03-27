@@ -34,20 +34,14 @@ export default function (prop) {
         () => prop.source.map((race, index) => createRaceItem(index, race, false)),
         []);
 
-    const raceListView = useMemo(() =>
-        <ul
-            onClick={selectCareer}
-            className={style.raceList}
-        >
-            {raceLiArray}
-        </ul>, []);
-
-    if (raceIndex !== -1) {
-        raceLiArray[raceIndex] = createRaceItem(raceIndex, prop.source[raceIndex], true);
-        if (lastRaceIndex !== -1) {
-            raceLiArray[lastRaceIndex] = createRaceItem(lastRaceIndex, prop.source[lastRaceIndex], false);
+    useMemo(() => {
+        if (raceIndex !== -1) {
+            raceLiArray[raceIndex] = createRaceItem(raceIndex, prop.source[raceIndex], true);
+            if (lastRaceIndex !== -1) {
+                raceLiArray[lastRaceIndex] = createRaceItem(lastRaceIndex, prop.source[lastRaceIndex], false);
+            }
         }
-    }
+    }, [raceIndex]);
 
     var detail = null;
     if (raceIndex !== -1) {
@@ -86,7 +80,12 @@ export default function (prop) {
     return [
         <h1>战斗无止境</h1>,
         <div className={style.wrapper}>
-            {raceListView}
+            <ul
+                onClick={selectCareer}
+                className={style.raceList}
+            >
+                {raceLiArray}
+            </ul>
             <div>
                 {detail}
             </div>
