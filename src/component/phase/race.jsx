@@ -1,5 +1,5 @@
-import { useMemo, useState } from 'react'
-import { useStateWithLast } from '../hook.js'
+import { useState } from 'react'
+import { useSwitch } from '../hook.js'
 import style from './race.css'
 
 const getLiIndex = function (event) {
@@ -19,7 +19,13 @@ const createRaceItem = function (key, race, isSelect) {
 };
 
 export default function (prop) {
-    const [lastRaceIndex, raceIndex, setRaceIndex] = useStateWithLast(-1);
+    const [raceLiArray, setRaceIndex, raceIndex] = useSwitch(
+        () => prop.source.map((race, index) => createRaceItem(index, race, false)),
+        lastIndex => createRaceItem(lastIndex, prop.source[lastIndex], false),
+        currentIndex => createRaceItem(currentIndex, prop.source[currentIndex], true),
+        -1
+    );
+
     const [ageIndex, setAgeIndex] = useState(0);
 
     const selectCareer = function (event) {
@@ -29,19 +35,6 @@ export default function (prop) {
             setAgeIndex(0);
         }
     };
-
-    const raceLiArray = useMemo(
-        () => prop.source.map((race, index) => createRaceItem(index, race, false)),
-        []);
-
-    useMemo(() => {
-        if (raceIndex !== -1) {
-            raceLiArray[raceIndex] = createRaceItem(raceIndex, prop.source[raceIndex], true);
-            if (lastRaceIndex !== -1) {
-                raceLiArray[lastRaceIndex] = createRaceItem(lastRaceIndex, prop.source[lastRaceIndex], false);
-            }
-        }
-    }, [raceIndex]);
 
     var detail = null;
     if (raceIndex !== -1) {
