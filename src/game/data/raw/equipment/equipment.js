@@ -1,3 +1,5 @@
+import { Stat, Weapon, WeaponType, WeaponCategory, Equipment, EquipType } from '../../assistant/constant.js'
+
 var f1 = [];
 var c1 = [];
 c1[0] = new RangeStat(Stat.attackMin, 10, 10);
