@@ -92,3 +92,5 @@ c18[1] = new RangeStat(Stat.protection, 1, 3);
 f1[17] = new EquipmentData(Equipment.FEET, EquipType.HEAVY, "Greaves", "铁靴", c18, 18);
 f1[18] = new EquipmentData(Equipment.NECKLACE, EquipType.ACCESORY, "necklace", "项链", [], 19);
 f1[19] = new EquipmentData(Equipment.RING, EquipType.ACCESORY, "ring", "戒指", [], 20);
+
+export default f1

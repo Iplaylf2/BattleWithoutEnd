@@ -31,7 +31,7 @@ export const EquipType = {
     LIGHT: 'light',
     ACCESORY: 'accesory'
 }
-export const SkillCategory = {
+export const SkillType = {
     ATTACK: 'attack',
     DEFENCE: 'defence'
 }
