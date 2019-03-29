@@ -1,3 +1,7 @@
+import Stat from '../../assistant/Stat.js'
+import StatMul from '../../assistant/StatMul.js'
+import Title from '../../assistant/Title.js'
+
 var a1 = [];
 a1[0] = new StatMul(Stat.protection, 1, 1);
 a1[1] = new StatMul(Stat.luck, 1, 5);

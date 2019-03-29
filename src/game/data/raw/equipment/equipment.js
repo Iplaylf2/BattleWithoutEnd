@@ -1,4 +1,5 @@
-import { Stat, Weapon, WeaponType, WeaponCategory, Equipment, EquipType } from '../../assistant/constant.js'
+import { Weapon, WeaponType, WeaponCategory, Equipment, EquipType } from '../../assistant/constant.js'
+import Stat from '../../assistant/Stat.js'
 import RangeStat from '../../assistant/RangeStat.js'
 import WeaponData from '../../assistant/WeaponData.js'
 import EquipmentData from '../../assistant/EquipmentData.js'

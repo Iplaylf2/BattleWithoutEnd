@@ -1,3 +1,7 @@
+import DefencePetSkillData from '../../assistant/DefencePetSkillData.js'
+import PassivePetSkillData from '../../assistant/PassivePetSkillData.js'
+import AttackPetSkillData from '../../assistant/AttackPetSkillData.js'
+
 export const counterattack = new DefencePetSkillData("Counterattack", "反击", [[30, 50], [30, 100]]);
 export const injury_resile = new DefencePetSkillData("Injury Resile", "反震", [[30, 25], [30, 50]]);
 export const dodge = new DefencePetSkillData("Dodge", "闪避", [[15], [20]]);

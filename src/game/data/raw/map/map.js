@@ -1,3 +1,7 @@
+import MonsterList from '../../assistant/MonsterList.js'
+import PetDataList from '../../assistant/PetDataList.js'
+import MapData from '../../assistant/MapData.js'
+
 var a1 = [];
 a1[0] = MonsterList.Young_Raccoon;
 a1[1] = MonsterList.Young_Gray_Raccoon;

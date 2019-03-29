@@ -1,3 +1,6 @@
+import PetTypeList from '../../assistant/PetTypeList.js'
+import PetData from '../../assistant/PetData.js'
+
 export const att_fox = new PetData("Red Fox", "红狐狸", PetTypeList.attack, "fox");
 export const def_fox = new PetData("Brown Fox", "棕狐狸", PetTypeList.defence, "fox");
 export const bal_fox = new PetData("Gray Fox", "灰狐狸", PetTypeList.balance, "fox");

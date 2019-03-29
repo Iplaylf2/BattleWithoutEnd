@@ -1,3 +1,7 @@
+import Stat from '../../assistant/Stat.js'
+import StatMul from '../../assistant/StatMul.js'
+import MonsterTitle from '../../assistant/MonsterTitle.js'
+
 var a1 = [];
 a1[0] = new StatMul(Stat.hp, 3);
 a1[1] = new StatMul(Stat.defence, 1.5, 10);

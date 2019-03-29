@@ -1,3 +1,8 @@
+import Stat from '../../assistant/Stat.js'
+import { SkillType, SkillCategory } from '../../assistant/constant.js'
+import ActiveSkillData from '../../assistant/ActiveSkillData.js'
+import PassiveSkillData from '../../assistant/PassiveSkillData.js'
+
 var a1 = [];
 a1[0] = new Stat(Stat.hp, 10);
 a1[1] = new Stat(Stat.str, 1);

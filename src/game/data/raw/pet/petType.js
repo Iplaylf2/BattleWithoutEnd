@@ -1,3 +1,6 @@
+import PetStats from '../../assistant/PetStats.js'
+import PetType from '../../assistant/PetType.js'
+
 export const attack = new PetType(PetType.ATTACK, new PetStats(50, 30, 20, 30, 0, 0, 10, 10, 130, 0), new PetStats(20, 10, 5, 10, 1, 1, 80, 30, 200, 1), new PetStats(10, 5, 3, 6, 1, 0, 0, 1, 0, 0), new PetStats(1, 0.5, 1, 2, 0.6, 0.2, 0, 0.3, 0, 0.1));
 export const defence = new PetType(PetType.DEFENCE, new PetStats(100, 30, 10, 15, 5, 5, 10, 10, 130, 0), new PetStats(40, 10, 2, 4, 3, 3, 80, 30, 200, 1), new PetStats(20, 5, 1, 3, 2, 0.5, 0, 1, 0, 0), new PetStats(3, 0.5, 0.2, 0.4, 1.2, 0.3, 0, 0.3, 0, 0.1));
 export const magic = new PetType(PetType.MAGIC, new PetStats(50, 100, 10, 15, 0, 0, 10, 10, 130, 5), new PetStats(20, 20, 2, 4, 1, 1, 80, 30, 200, 3), new PetStats(10, 10, 1, 2, 1, 0, 0, 1, 0, 1), new PetStats(1, 2, 0.2, 0.4, 0.6, 0.2, 0, 0.3, 0, 0.5));

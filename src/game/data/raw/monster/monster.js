@@ -1,3 +1,5 @@
+import MonsterData from '../../assistant/MonsterData.js'
+
 export const Young_Raccoon = new MonsterData("Young Raccoon", "小浣熊", 10, 1, 3, 0, 0, 5, 150, 30, 70);
 export const Young_Gray_Raccoon = new MonsterData("Young Gray Raccoon", "小灰浣熊", 20, 2, 4, 2, 3, 10, 150, 50, 80);
 export const Young_Brown_Fox = new MonsterData("Young Brown Fox", "小棕狐狸", 20, 2, 5, 2, 3, 10, 150, 50, 90);
