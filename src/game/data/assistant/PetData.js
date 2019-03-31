@@ -8,6 +8,6 @@ export default class PetData {
         this.mc = mc;
     }
     toData() {
-        return [this.id, this.name, this.realName, this.type, this.mc];
+        return [this.id, this.name, this.realName, this.type, this.mc, this.mId];
     }
 }

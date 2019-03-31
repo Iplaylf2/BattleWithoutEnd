@@ -262,3 +262,5 @@ b16[1] = PetDataList.mag_dragon;
 b16[2] = PetDataList.def_unicorn;
 b16[3] = PetDataList.bal_unicorn;
 c1[15] = new MapData(395, 265, "???", "???", 6, a16, b16);
+
+export default c1

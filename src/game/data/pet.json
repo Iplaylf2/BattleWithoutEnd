@@ -4,7 +4,8 @@
         "name",
         "realName",
         "type",
-        "mc"
+        "mc",
+        "mapId"
     ],
     "content": [
         [
@@ -12,259 +13,296 @@
             "Red Fox",
             "红狐狸",
             "ATTACK",
-            "fox"
+            "fox",
+            1
         ],
         [
             1,
             "Brown Fox",
             "棕狐狸",
             "DEFENCE",
-            "fox"
+            "fox",
+            1
         ],
         [
             2,
             "Gray Fox",
             "灰狐狸",
             "BALANCE",
-            "fox"
+            "fox",
+            1
         ],
         [
             3,
             "Town Rat",
             "白鼠",
             "ATTACK",
-            "rat"
+            "rat",
+            2
         ],
         [
             4,
             "Black Rat",
             "黑鼠",
             "DEFENCE",
-            "rat"
+            "rat",
+            2
         ],
         [
             5,
             "Rat Mage",
             "魔鼠",
             "MAGIC",
-            "rat"
+            "rat",
+            2
         ],
         [
             6,
             "Red Spider",
             "红蜘蛛",
             "ATTACK",
-            "spider"
+            "spider",
+            3
         ],
         [
             7,
             "Giant Spider",
             "巨蜘蛛",
             "DEFENCE",
-            "spider"
+            "spider",
+            3
         ],
         [
             8,
             "Wild Wolf",
             "野狼",
             "ATTACK",
-            "wolf"
+            "wolf",
+            4
         ],
         [
             9,
             "Werewolf",
             "狼人",
             "MAGIC",
-            "wolf"
+            "wolf",
+            4
         ],
         [
             10,
             "Red Bear",
             "红熊",
             "ATTACK",
-            "bear"
+            "bear",
+            5
         ],
         [
             11,
             "Brown Bear",
             "棕熊",
             "DEFENCE",
-            "bear"
+            "bear",
+            5
         ],
         [
             12,
             "Gray Bear",
             "灰熊",
             "BALANCE",
-            "bear"
+            "bear",
+            5
         ],
         [
             13,
             "Goblin Warrior",
             "哥布林战士",
             "ATTACK",
-            "goblin"
+            "goblin",
+            8
         ],
         [
             14,
             "Goblin Protector",
             "哥布林卫士",
             "DEFENCE",
-            "goblin"
+            "goblin",
+            8
         ],
         [
             15,
             "Goblin Archer",
             "哥布林弓手",
             "BALANCE",
-            "goblin"
+            "goblin",
+            8
         ],
         [
             16,
             "Goblin Mage",
             "哥布林法师",
             "MAGIC",
-            "goblin"
+            "goblin",
+            8
         ],
         [
             17,
             "Skeleton Warrior",
             "骷髅战士",
             "ATTACK",
-            "skeleton"
+            "skeleton",
+            10
         ],
         [
             18,
             "Skeleton Protector",
             "骷髅卫士",
             "DEFENCE",
-            "skeleton"
+            "skeleton",
+            10
         ],
         [
             19,
             "Skeleton Archer",
             "骷髅弓手",
             "BALANCE",
-            "skeleton"
+            "skeleton",
+            10
         ],
         [
             20,
             "Skeleton Mage",
             "骷髅法师",
             "MAGIC",
-            "skeleton"
+            "skeleton",
+            10
         ],
         [
             21,
             "Fire Sprite",
             "火焰幽灵",
             "ATTACK",
-            "ghost"
+            "ghost",
+            11
         ],
         [
             22,
             "Stone Sprite",
             "岩石幽灵",
             "DEFENCE",
-            "ghost"
+            "ghost",
+            11
         ],
         [
             23,
             "Wind Sprite",
             "风幽灵",
             "BALANCE",
-            "ghost"
+            "ghost",
+            11
         ],
         [
             24,
             "Lightning Sprite",
             "雷幽灵",
             "MAGIC",
-            "ghost"
+            "ghost",
+            11
         ],
         [
             25,
             "Zombie Warrior",
             "僵尸武士",
             "ATTACK",
-            "zombie"
+            "zombie",
+            12
         ],
         [
             26,
             "Zombie Protector",
             "僵尸卫士",
             "DEFENCE",
-            "zombie"
+            "zombie",
+            12
         ],
         [
             27,
             "Zombie Archer",
             "僵尸弓手",
             "BALANCE",
-            "zombie"
+            "zombie",
+            12
         ],
         [
             28,
             "Zombie Mage",
             "僵尸法师",
             "MAGIC",
-            "zombie"
+            "zombie",
+            12
         ],
         [
             29,
             "Warrior of Ruins",
             "毁灭战士",
             "ATTACK",
-            "attack"
+            "attack",
+            14
         ],
         [
             30,
             "Protector of Ruins",
             "毁灭卫士",
             "DEFENCE",
-            "defence"
+            "defence",
+            14
         ],
         [
             31,
             "Archer of Ruins",
             "毁灭弓手",
             "BALANCE",
-            "balance"
+            "balance",
+            14
         ],
         [
             32,
             "Mage of Ruins",
             "毁灭法师",
             "MAGIC",
-            "magic"
+            "magic",
+            14
         ],
         [
             33,
             "Holy Unicorn",
             "神圣独角兽",
             "DEFENCE",
-            "unicorn"
+            "unicorn",
+            15
         ],
         [
             34,
             "Prairie Unicorn",
             "自然独角兽",
             "BALANCE",
-            "unicorn"
+            "unicorn",
+            15
         ],
         [
             35,
             "Dark Dragon",
             "暗黑龙",
             "ATTACK",
-            "dragon"
+            "dragon",
+            15
         ],
         [
             36,
             "Shining Dragon",
             "光明龙",
             "MAGIC",
-            "dragon"
+            "dragon",
+            15
         ]
     ]
 }

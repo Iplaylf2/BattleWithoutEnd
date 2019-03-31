@@ -15,6 +15,6 @@ export default class MonsterData {
         this.CP = CP;
     }
     toData() {
-        return [this.id, this.name, this.realName, this.hp, this.attack_min, this.attack_max, this.defence, this.protection, this.crit, this.crit_mul, this.balance, this.CP];
+        return [this.id, this.name, this.realName, this.hp, this.attack_min, this.attack_max, this.defence, this.protection, this.crit, this.crit_mul, this.balance, this.CP, this.mId];
     }
 }

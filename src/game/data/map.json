@@ -1,0 +1,106 @@
+{
+    "struct": [
+        "id",
+        "name",
+        "realName",
+        "modifier"
+    ],
+    "content": [
+        [
+            0,
+            "Town of Beginner",
+            "新手镇",
+            0
+        ],
+        [
+            1,
+            "Gairech Hill",
+            "格林山脉",
+            0.4
+        ],
+        [
+            2,
+            "Alby Peninsula",
+            "斯特莱恩",
+            0.8
+        ],
+        [
+            3,
+            "Forest of Souls",
+            "灵魂之森",
+            1.2
+        ],
+        [
+            4,
+            "Filia",
+            "费拉",
+            1.6
+        ],
+        [
+            5,
+            "The Frozen Shore",
+            "冰封角",
+            2
+        ],
+        [
+            6,
+            "Ghost Hill",
+            "幽魂谷",
+            2.4
+        ],
+        [
+            7,
+            "Misty Mountain",
+            "谜雾山",
+            2.8
+        ],
+        [
+            8,
+            "The Bite",
+            "食人湾",
+            3.2
+        ],
+        [
+            9,
+            "The Gullet",
+            "加尔特",
+            3.6
+        ],
+        [
+            10,
+            "Casterly Rock",
+            "暴土城",
+            4
+        ],
+        [
+            11,
+            "Bone Cave",
+            "埋骨所",
+            4.4
+        ],
+        [
+            12,
+            "Cape Warth",
+            "风怒角",
+            4.8
+        ],
+        [
+            13,
+            "Wyl",
+            "魔渊",
+            5.2
+        ],
+        [
+            14,
+            "Vaith",
+            "神墓",
+            5.6
+        ],
+        [
+            15,
+            "???",
+            "???",
+            6
+        ]
+    ]
+}
