@@ -1,0 +1,371 @@
+{
+    "struct": [
+        "name",
+        "realName",
+        "description",
+        "maxFix",
+        "countFix"
+    ],
+    "content": [
+        [
+            0,
+            "the Skillful",
+            "灵巧的",
+            "敏捷超过200",
+            200,
+            0
+        ],
+        [
+            1,
+            "the Tough",
+            "坚强的",
+            "意志超过200",
+            200,
+            0
+        ],
+        [
+            2,
+            "the Lucky",
+            "幸运的",
+            "幸运超过200",
+            200,
+            0
+        ],
+        [
+            3,
+            "the Beginner Forger",
+            "初级铁匠",
+            "强化出+5的装备",
+            5,
+            0
+        ],
+        [
+            4,
+            "the Advanced Forger",
+            "进阶铁匠",
+            "强化出+8的装备",
+            8,
+            0
+        ],
+        [
+            5,
+            "the Expert Forger",
+            "专业铁匠",
+            "强化出+12的装备",
+            12,
+            0
+        ],
+        [
+            6,
+            "the God blessed",
+            "上帝保佑的",
+            "强化出+15的装备",
+            15,
+            0
+        ],
+        [
+            7,
+            "who Experienced Death",
+            "经历死亡的",
+            "一次承受了超过500点伤害",
+            500,
+            0
+        ],
+        [
+            8,
+            "who Transcended Death",
+            "超越死亡的",
+            "一次承受了超过1000点伤害",
+            1000,
+            0
+        ],
+        [
+            9,
+            "the Breaker",
+            "破坏者",
+            "一次造成了500点伤害",
+            500,
+            0
+        ],
+        [
+            10,
+            "the Terminator",
+            "终结者",
+            "一次造成了1000点伤害",
+            1000,
+            0
+        ],
+        [
+            11,
+            "the Killer",
+            "杀手",
+            "总计造成10万伤害",
+            0,
+            100000
+        ],
+        [
+            12,
+            "the Warlord",
+            "战神",
+            "总计造成100万伤害",
+            0,
+            1000000
+        ],
+        [
+            13,
+            "the Boss Slayer",
+            "Boss屠戮者",
+            "击败100个boss",
+            0,
+            100
+        ],
+        [
+            14,
+            "the Butterfingers",
+            "手划的",
+            "强化装备时连续失败4次",
+            0,
+            4
+        ],
+        [
+            15,
+            "the Weakness Discoverer",
+            "弱点观察者",
+            "连续7次暴击",
+            0,
+            7
+        ],
+        [
+            16,
+            "the Elemental Apprentice",
+            "初级元素师",
+            "冰矛、火焰、雷矢都达到Rank 1",
+            0,
+            3
+        ],
+        [
+            17,
+            "the Elemental Master",
+            "大师元素师",
+            "冰刃、火球、雷击都达到Rank 1",
+            0,
+            3
+        ],
+        [
+            18,
+            "who Reached Lv 50 at Age 10 ",
+            "10岁达到50级的",
+            "在10岁时达到50级",
+            50,
+            0
+        ],
+        [
+            19,
+            "the Combat Master",
+            "近战大师",
+            "近战精通达到Rank 1",
+            0,
+            0
+        ],
+        [
+            20,
+            "the Master of Defence",
+            "防御大师",
+            "防御达到Rank 1",
+            0,
+            0
+        ],
+        [
+            21,
+            "the Master of Counter",
+            "反击大师",
+            "反击达到Rank 1",
+            0,
+            0
+        ],
+        [
+            22,
+            "the Master of Smash",
+            "重击大师",
+            "重击达到Rank 1",
+            0,
+            0
+        ],
+        [
+            23,
+            "the Magic Master",
+            "魔法大师",
+            "魔法精通达到Rank 1",
+            0,
+            0
+        ],
+        [
+            24,
+            "the Master of Icebolt",
+            "冰矛大师",
+            "冰矛达到Rank 1",
+            0,
+            0
+        ],
+        [
+            25,
+            "the Master of Firebolt",
+            "火焰大师",
+            "火焰达到Rank 1",
+            0,
+            0
+        ],
+        [
+            26,
+            "the Master of Lightning Bolt",
+            "雷矢大师",
+            "雷矢达到Rank 1",
+            0,
+            0
+        ],
+        [
+            27,
+            "the Master of Critical Hit",
+            "暴击大师",
+            "暴击达到Rank 1",
+            0,
+            0
+        ],
+        [
+            28,
+            "the Master of Blacksmithing",
+            "锻造大师",
+            "铁匠达到Rank 1",
+            0,
+            0
+        ],
+        [
+            29,
+            "the Master of Ice Spear",
+            "冰刃大师",
+            "冰刃达到Rank 1",
+            0,
+            0
+        ],
+        [
+            30,
+            "the Master of Fireball",
+            "火球大师",
+            "火球达到Rank 1",
+            0,
+            0
+        ],
+        [
+            31,
+            "the Master of Thunder",
+            "雷击大师",
+            "雷击达到Rank 1",
+            0,
+            0
+        ],
+        [
+            32,
+            "the Master of Range",
+            "远程大师",
+            "远程精通达到Rank 1",
+            0,
+            0
+        ],
+        [
+            33,
+            "the Beginner",
+            "初心者",
+            "欢迎来到战斗无止境的游戏世界",
+            0,
+            0
+        ],
+        [
+            34,
+            "the Master of Corrosion",
+            "破甲大师",
+            "破甲箭达到Rank 1",
+            0,
+            0
+        ],
+        [
+            35,
+            "the Life Drain Master",
+            "吸血大师",
+            "吸血达到Rank 1",
+            0,
+            0
+        ],
+        [
+            36,
+            "the Mana Shield Master",
+            "魔法盾大师",
+            "魔法盾达到Rank 1",
+            0,
+            0
+        ],
+        [
+            37,
+            "the Reborn",
+            "转生的",
+            "在20岁后转生",
+            0,
+            1
+        ],
+        [
+            38,
+            "the Sniper",
+            "狙击者",
+            "远程精通、毒箭、破甲箭都达到Rank 1",
+            0,
+            3
+        ],
+        [
+            39,
+            "the Adult",
+            "成年的",
+            "达到18岁",
+            18,
+            0
+        ],
+        [
+            40,
+            "the All-Knowing",
+            "睿智的",
+            "达到30岁",
+            30,
+            0
+        ],
+        [
+            41,
+            "the Old",
+            "年老的",
+            "达到40岁",
+            40,
+            0
+        ],
+        [
+            42,
+            "the Wise",
+            "聪明的",
+            "智力超过200",
+            200,
+            0
+        ],
+        [
+            43,
+            "the Strong",
+            "强壮的",
+            "力量超过200",
+            200,
+            0
+        ],
+        [
+            44,
+            "the Master of Mirage Missle",
+            "毒箭大师",
+            "毒箭达到Rank 1",
+            0,
+            0
+        ]
+    ]
+}
