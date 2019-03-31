@@ -1,0 +1,24 @@
+{
+    "struct": [
+        "id",
+        "type"
+    ],
+    "content": [
+        [
+            0,
+            "ATTACK"
+        ],
+        [
+            1,
+            "DEFENCE"
+        ],
+        [
+            2,
+            "MAGIC"
+        ],
+        [
+            3,
+            "BALANCE"
+        ]
+    ]
+}

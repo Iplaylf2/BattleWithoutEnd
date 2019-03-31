@@ -1,0 +1,270 @@
+{
+    "struct": [
+        "id",
+        "name",
+        "realName",
+        "type",
+        "mc"
+    ],
+    "content": [
+        [
+            0,
+            "Red Fox",
+            "红狐狸",
+            "ATTACK",
+            "fox"
+        ],
+        [
+            1,
+            "Brown Fox",
+            "棕狐狸",
+            "DEFENCE",
+            "fox"
+        ],
+        [
+            2,
+            "Gray Fox",
+            "灰狐狸",
+            "BALANCE",
+            "fox"
+        ],
+        [
+            3,
+            "Town Rat",
+            "白鼠",
+            "ATTACK",
+            "rat"
+        ],
+        [
+            4,
+            "Black Rat",
+            "黑鼠",
+            "DEFENCE",
+            "rat"
+        ],
+        [
+            5,
+            "Rat Mage",
+            "魔鼠",
+            "MAGIC",
+            "rat"
+        ],
+        [
+            6,
+            "Red Spider",
+            "红蜘蛛",
+            "ATTACK",
+            "spider"
+        ],
+        [
+            7,
+            "Giant Spider",
+            "巨蜘蛛",
+            "DEFENCE",
+            "spider"
+        ],
+        [
+            8,
+            "Wild Wolf",
+            "野狼",
+            "ATTACK",
+            "wolf"
+        ],
+        [
+            9,
+            "Werewolf",
+            "狼人",
+            "MAGIC",
+            "wolf"
+        ],
+        [
+            10,
+            "Red Bear",
+            "红熊",
+            "ATTACK",
+            "bear"
+        ],
+        [
+            11,
+            "Brown Bear",
+            "棕熊",
+            "DEFENCE",
+            "bear"
+        ],
+        [
+            12,
+            "Gray Bear",
+            "灰熊",
+            "BALANCE",
+            "bear"
+        ],
+        [
+            13,
+            "Goblin Warrior",
+            "哥布林战士",
+            "ATTACK",
+            "goblin"
+        ],
+        [
+            14,
+            "Goblin Protector",
+            "哥布林卫士",
+            "DEFENCE",
+            "goblin"
+        ],
+        [
+            15,
+            "Goblin Archer",
+            "哥布林弓手",
+            "BALANCE",
+            "goblin"
+        ],
+        [
+            16,
+            "Goblin Mage",
+            "哥布林法师",
+            "MAGIC",
+            "goblin"
+        ],
+        [
+            17,
+            "Skeleton Warrior",
+            "骷髅战士",
+            "ATTACK",
+            "skeleton"
+        ],
+        [
+            18,
+            "Skeleton Protector",
+            "骷髅卫士",
+            "DEFENCE",
+            "skeleton"
+        ],
+        [
+            19,
+            "Skeleton Archer",
+            "骷髅弓手",
+            "BALANCE",
+            "skeleton"
+        ],
+        [
+            20,
+            "Skeleton Mage",
+            "骷髅法师",
+            "MAGIC",
+            "skeleton"
+        ],
+        [
+            21,
+            "Fire Sprite",
+            "火焰幽灵",
+            "ATTACK",
+            "ghost"
+        ],
+        [
+            22,
+            "Stone Sprite",
+            "岩石幽灵",
+            "DEFENCE",
+            "ghost"
+        ],
+        [
+            23,
+            "Wind Sprite",
+            "风幽灵",
+            "BALANCE",
+            "ghost"
+        ],
+        [
+            24,
+            "Lightning Sprite",
+            "雷幽灵",
+            "MAGIC",
+            "ghost"
+        ],
+        [
+            25,
+            "Zombie Warrior",
+            "僵尸武士",
+            "ATTACK",
+            "zombie"
+        ],
+        [
+            26,
+            "Zombie Protector",
+            "僵尸卫士",
+            "DEFENCE",
+            "zombie"
+        ],
+        [
+            27,
+            "Zombie Archer",
+            "僵尸弓手",
+            "BALANCE",
+            "zombie"
+        ],
+        [
+            28,
+            "Zombie Mage",
+            "僵尸法师",
+            "MAGIC",
+            "zombie"
+        ],
+        [
+            29,
+            "Warrior of Ruins",
+            "毁灭战士",
+            "ATTACK",
+            "attack"
+        ],
+        [
+            30,
+            "Protector of Ruins",
+            "毁灭卫士",
+            "DEFENCE",
+            "defence"
+        ],
+        [
+            31,
+            "Archer of Ruins",
+            "毁灭弓手",
+            "BALANCE",
+            "balance"
+        ],
+        [
+            32,
+            "Mage of Ruins",
+            "毁灭法师",
+            "MAGIC",
+            "magic"
+        ],
+        [
+            33,
+            "Holy Unicorn",
+            "神圣独角兽",
+            "DEFENCE",
+            "unicorn"
+        ],
+        [
+            34,
+            "Prairie Unicorn",
+            "自然独角兽",
+            "BALANCE",
+            "unicorn"
+        ],
+        [
+            35,
+            "Dark Dragon",
+            "暗黑龙",
+            "ATTACK",
+            "dragon"
+        ],
+        [
+            36,
+            "Shining Dragon",
+            "光明龙",
+            "MAGIC",
+            "dragon"
+        ]
+    ]
+}
