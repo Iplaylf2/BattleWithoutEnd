@@ -122,3 +122,5 @@ a21[3] = new StatMul(Stat.protection, 1, 50);
 a21[4] = new StatMul(Stat.crit, 2.5, 100);
 a21[5] = new StatMul(Stat.crit_mul, 2.5, 50);
 b1[22] = new MonsterTitle("区域BOS", a21, 20, 20, 3);
+
+export default b1;

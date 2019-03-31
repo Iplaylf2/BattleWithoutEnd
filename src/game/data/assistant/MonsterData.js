@@ -1,5 +1,7 @@
+var count = 0;
 export default class MonsterData {
     constructor(name, realName, hp, attack_min, attack_max, defence, protection, crit, crit_mul, balance, CP) {
+        this.id = count++;
         this.name = name;
         this.realName = realName;
         this.hp = hp;
@@ -13,6 +15,6 @@ export default class MonsterData {
         this.CP = CP;
     }
     toData() {
-        return [this.name, this.realName, this.hp, this.attack_min, this.attack_max, this.defence, this.protection, this.crit, this.crit_mul, this.balance, this.CP];
+        return [this.id, this.name, this.realName, this.hp, this.attack_min, this.attack_max, this.defence, this.protection, this.crit, this.crit_mul, this.balance, this.CP];
     }
 }
